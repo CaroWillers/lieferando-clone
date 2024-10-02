@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/vnd.icon" href="./img/delivery.ico">
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styleMobile.css" />
+    <link rel="stylesheet" href="./fonts.css" /> 
+    <script src="array.js"></script>
+    <script src="script.js"></script>
+    <title>Caro's Lieferando</title>
+  </head>
+
+  <body onload="init()" class="body">
+    <header class="header">
+      <div>
+        <img class="logo" src="./img/LieferandoLogo.png">
+      </div>
+      <div class="Speisekarte" style="font-size: 16px"><b>Speisekarte</b></div>
+      <div class="headerIcons">
+        <div role="button" class="icon">
+          <img class="flag" src="./img/deutschland.png">
+        </div>
+        <div role="button" class="icon">
+          <img src="./img/burger.png">
+        </div> 
+      </div>
+    </header>
+
+    <main class="main-container">
+      <div class="section-left">
+        <div class="restaurantContainer"> 
+          <img class="headerImage" src="./img/Headerbild.jpg"> 
+          <div class="RestaurantName">
+            <img class="iGalettiLogo" src="./img/logo_iGaletti.png">
+          </div>  
+        </div>
+        <div class="profileContainer">
+          <div class="profile">
+            <h1 class="h1">I Galletti</h1>
+            <div  class="Bewertungen">
+              <img style="width: 100px"  src="./img/5Stars.png">23 Bewertungen</div>
+            </div>   
+          </div>
+        <div class="menuChoiceContainer">
+          <div class="searchButton">
+            <button class="openSearch" onclick="openSearch()">
+              <img id="searchIcon" class="searchIcon" src="./img/searchIcon48px.png">
+            </button>
+          </div>
+          <div class="overview" id="overview">
+            <a href="#Beliebt" class="Beliebt">Beliebt<img class="heartIcon" src="./img/heart.png"></a>    
+            <a href="#Antipasti" class="menuChoice">Antipasti und Pinsa Romana (Pizza)</a>
+            <a href="#Vegetariana" class="menuChoice">Pasta Vegetariana</a>
+          </div>
+        </div> 
+        <div class="searchContainer" id="searchContainer" class="openSearch" style="display: none;">
+          <input class="searchInput" type="text" id="searchInput" placeholder="  Suche nach Gerichten..." oninput="searchMenu()">
+          <button class="closeSearch" id="closeSearch" onclick="closeSearch()">X</button>
+        </div>
+        <div class="menuCard">
+          <div id="menuContainer" class="menuCategory"></div>
+        </div> 
+      </div>
+      <div id="shoppingCard" class="section-right"> 
+        <h2 class="warenkorb">Warenkorb</h2> 
+        <button onclick="closePopup()" class="closeButton">
+          <img class="searchIcon" src="./img/closeIcon.png">
+        </button>        
+        <div class="basket">
+          <div class="deliveryChoice">
+            <button onclick="delivery()" id="delivery" class="Lieferung"> 
+              <div ><img class="orderIcon" src="./img/Lieferung.png"></div>
+              <div class="deliveryContdition">
+                <div><b>Lieferung</b></div>
+                <div style="font-size:12px">20-45 min</div>
+              </div>
+            </button>
+            <button onclick="takeaway()" id="takeaway" class="Abholung"> 
+              <div ><img class="orderIcon" src="./img/Abholung.png"></div>
+              <div class="deliveryContdition">          
+                <div><b>Abholung</b></div>
+                <div style="font-size:12px">15 min</div>
+              </div>
+            </button>
+          </div> 
+        </div>
+        <div id="emptyBasket" class="emptyBasket">
+          <div ><img class="warenkorbIcon" src="./img/Abholung.png"></div>
+          <h2 class="h2">Fülle Deinen Warenkorb</h2> 
+          <p class="text">Füge einige leckere Gerichte aus der Speisekarte hinzu und bestelle dein Essen.</p> 
+        </div>
+        <div class="orderContainer" id="renderShoppingBasket"></div> 
+        <div id="minValueInfo" class="minValueOrder">Leider kannst du noch nicht bestellen. I Galletti liefert erst ab einem Mindestbestellwert von 20,00 € (exkl. Lieferkosten)</div>
+        <div class="paymentContainer" id="checkout"></div>
+      </div>
+      <div class="hidePopup"> 
+        <button id="mobileShoppingButton" onclick="TogglePopup()" class="mobileShoppingButton"><img class="warenkorbIcon" src="./img/shoppingBasket.png"> Warenkorb</button>
+        <div id="popup" class="popup"></div>
+      </div>
+    </main>
+    <footer class="footerContainer">
+      <div class="footer">
+        <div>Ein Restaurant empfehlen</div>
+        <div>Ein Restaurant anmelden</div>
+        <div>Jobs</div>
+        <div>AGB</div>
+        <div>Datenschutzerklärung</div>
+        <div>Impressum</div>
+        <div>Verwendung von Cookies</div>
+      </div>
+      <div>© 2023 Lieferando</div>
+    </footer> 
+  </body>
+</html>

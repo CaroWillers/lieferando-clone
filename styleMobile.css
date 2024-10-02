@@ -1,0 +1,668 @@
+:root {
+  --Lieferando_orange: rgb(255, 128, 0);
+  --Background_body: #f9f9f9;
+  --Abholung: rgb(239, 237, 234);
+  --light_grey: #f7f7f7;
+  --hover_grey: #efedea;
+}
+
+@media (max-width: 1280px) {
+.hidePopup {
+  display: flex !important;
+}
+.section-left {
+  max-width: calc(100% + 450px);
+  border-right: none;
+  box-shadow: none;
+}
+.section-right {
+  display: none;
+  width: 0;
+}
+.restaurantContainer {
+  max-height: 280px;
+}
+.profileContainer { 
+  margin-top: 30px;
+  padding-left: 50px;
+}
+.profile {
+  padding: 0;
+}
+.menuChoiceContainer {
+  margin-top: 0;
+}
+.mobileShoppingButton {
+  cursor: pointer;
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  right: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  background-color: var(--Lieferando_orange);
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 20px;
+  outline: none;
+  border-radius: 50px;
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  z-index: 1001;
+  gap: 20px;
+}
+.popup { 
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; 
+  background-color: white;  
+  z-index: 999;
+  box-sizing: border-box;
+}
+.closeButton {
+  display: block;
+  cursor: pointer; 
+  position: absolute;
+  top: 95px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  padding: 6px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--light_grey); 
+}
+.closeButton:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  background-color: #efedea;
+} 
+.deliveryChoice {
+  width: 400px;
+  margin: 10px 20px 10px 20px;
+}
+.basket {
+  padding-bottom: 10px;
+}
+.emptyBasket {
+  width: auto;
+  padding: 10px;
+}
+.orderContainer {
+  width: auto;
+  padding: 30px; 
+}
+.order { 
+  width: auto;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 30px;
+  gap: 40px;
+}
+.order span {
+  flex: 1;
+  min-width: 50px;
+}
+.PlusMinusIcon {
+  font-size: 36px;
+  padding: 12px;
+  width: 42px;
+  height: 42px;
+}
+.searchIcon {
+  padding: 8px;
+  width: 24px;
+  height: 24px;
+} 
+.searchContainer {
+  width: 90%
+}
+.closeSearch {
+  margin-left: -40px;
+}
+.menuChoiceContainer {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+.minValueOrder { 
+  width: auto;
+  margin: 20px;
+  padding: 20px;
+}
+.checkoutContainer { 
+  display: flex;
+  padding: 0;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+.paymentContainer {
+  margin: 30px;
+  width: auto;
+}
+.payment { 
+  padding: 10px;
+  font-size: 16px; 
+  margin-top: 30px;
+}
+.footerContainer {
+  height: 150px;
+}
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 12px;
+  gap: 10px;
+  padding: 10px;
+}
+
+}
+@media (max-width: 768px) {
+.restaurantContainer { 
+  height: 200px;
+}
+.warenkorb {
+  margin-top: 100px;
+  margin-bottom: 10px;
+}
+.closeButton {
+  top: 100px;
+}
+.orderContainer {
+  padding-bottom: 10px;
+}
+.order {
+  padding-bottom: 15px;
+}
+.payment {
+  margin-top: 20px;
+}
+}
+
+@media (max-width: 540px){
+.iGalettiLogo {
+  width: 70px;
+  height: 80px;
+}
+.profileContainer { 
+  margin-top: -80px;
+  padding-left: 40px;
+}
+.header { 
+  height: 50px;
+  justify-content: space-evenly;
+  padding: 0; 
+}
+.headerImage {
+  width: 100%;
+}
+.logo {
+  width: 150px;
+  margin-right: 10px;
+  padding: 0;
+}
+.Speisekarte {
+  display: none;
+}
+.headerIcons {
+  display: flex;
+  padding: 0;
+}
+.icon {
+  width: 24px;
+  margin-right: 0;
+  padding: 0;
+}
+.flag {
+  width: 24px;
+  height: 24px;
+}
+.restaurantContainer { 
+  height: 220px;
+}
+.restaurantName { 
+  transform: translateY(-70%);
+}
+.iGalettiLogo {
+  width: 60px;
+  height: 80px;
+}
+.profileContainer {
+  margin-top: -90px;
+  padding-left: 30px;
+}
+.profile {
+  padding: 0;
+}
+.menuChoiceContainer { 
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+  flex-direction: column;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.searchButton {
+  width: 100%;
+  padding-left: 30px;
+}
+.menuCategory {
+  padding: 0;
+}
+.searchButton {
+  width: 100%; 
+}
+.openSearch {
+  padding-left: 30px;
+}
+.searchContainer {
+  width: 70%;
+}
+.overview { 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0;
+} 
+.Beliebt {
+  padding: 5px 30px;
+}
+.searchIcon {
+  padding: 6px;
+  width: 16px;
+  height: 16px;
+} 
+.warenkorb {
+  margin-top: 60px;
+  margin-bottom: 0;
+}
+.closeButton {
+  top: 75px;
+}
+.deliveryChoice {
+  width: 250px;
+  margin: 10px 20px 10px 20px;
+}
+.Lieferung {
+  padding: 5px 10px 5px 10px;
+}
+.Abholung {
+  padding: 5px 10px 5px 10px;
+}
+.orderContainer {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0;
+}
+.order {
+  box-sizing: border-box;
+  width: 90%;
+  font-size: 11px;
+  gap: 3px;
+  margin-left: 20px; 
+  padding-bottom: 5px;
+}
+.order span { 
+  flex: 1;
+  max-width: 50px;
+}
+.trashIcon {
+  margin-left: -50px;
+}
+.PlusMinusIcon {
+  font-size: 32px;
+  padding: 8px;
+  width: 32px;
+  height: 32px;
+}
+.paymentContainer {
+  margin: 20px;
+  margin-bottom: 50px;
+}
+.payment {
+  margin-top: 5px;
+}
+.minValueOrder {
+  width: auto;
+  margin: 20px;
+  padding: 10px;
+  font-size: 12px;
+}
+.mobileShoppingButton {
+  font-size: 20px;
+  bottom: 30px;
+}
+.footerContainer { 
+  height: 150px;
+}
+.footer { 
+  font-size: 10px;
+  gap: 5px;
+  padding: 5px;
+}
+}
+
+@media (max-width: 495px) { 
+.header { 
+  height: 50px;
+  justify-content: space-evenly;
+  padding: 0; 
+}
+.headerImage {
+  width: 100%;
+}
+.logo {
+  width: 120px;
+  margin-right: 10px;
+  padding: 0;
+}
+.Speisekarte {
+  display: none;
+}
+.headerIcons {
+  display: flex;
+  padding: 0;
+}
+.icon {
+  width: 24px;
+  margin-right: 0;
+  padding: 0;
+}
+.flag {
+  width: 24px;
+  height: 24px;
+}
+.restaurantContainer { 
+  height: 220px;
+}
+.restaurantName { 
+  transform: translateY(-70%);
+}
+.profileContainer { 
+  margin-top: -90px;
+  padding-left: 30px;
+}
+.profile {
+  padding: 0;
+}
+.searchContainer { 
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.searchButton {
+  width: 100%;
+  padding-left: 30px;
+}
+.menuCategory {
+  padding: 0;
+}
+.searchButton {
+  width: 100%; 
+}
+.openSearch {
+  padding-left: 30px;
+}
+.overview { 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0;
+} 
+.Beliebt {
+  padding: 5px 30px;
+}
+.searchIcon {
+  padding: 6px;
+  width: 20px;
+  height: 20px;
+} 
+.warenkorb {
+  margin-top: 80px;
+  margin-bottom: 0;
+} 
+.deliveryChoice {
+  width: 250px;
+  margin: 10px 20px 10px 20px;
+}
+.Lieferung {
+  padding: 5px 10px 5px 10px;
+}
+.Abholung {
+  padding: 5px 10px 5px 10px;
+}
+.orderContainer { 
+  padding: 0;
+}
+.order { 
+  width: 90%;
+  margin-left: 20px; 
+  padding-bottom: 10px;
+}
+.order span {  
+    max-width: 50px;
+}
+.trashIcon {
+  margin-left: -50px;
+}
+.paymentContainer {
+  margin: 20px;
+  margin-bottom: 50px;
+}
+.payment {
+  margin-top: 20px;
+}
+.mobileShoppingButton {
+  font-size: 20px;
+  bottom: 30px;
+} 
+}
+
+@media (max-width: 390px) { 
+.restaurantContainer {
+  height: 200px;  
+}
+.RestaurantName { 
+  transform: translateY(-47px); 
+  padding-left: 20px;
+} 
+.profileContainer {
+  margin-top: -75px; 
+  padding-left: 20px;
+}
+.h1 {
+  margin: 0;
+}
+.searchButton { 
+  padding-left: 0;
+}
+.overview {
+  gap: 5px;
+}
+.warenkorbIcon {
+  display: none;
+}
+.warenkorb {
+  margin-top: 60px;
+  margin-bottom: 10px;
+}
+.closeButton {
+  top: 60px;
+}
+.orderContainer {
+  width: 100%;
+  padding: 0;
+}
+.order {
+  width: 95%; 
+  margin-left: 10px; 
+  padding-bottom: 5px;
+}
+.order span { 
+    flex: 1;
+    max-width: 50px;
+}
+.trashIcon {
+  margin-left: -50px;
+}
+.paymentContainer {
+  margin: 10px;
+  margin-bottom: 50px;
+}
+.payment {
+  margin-top: 10px;
+}
+.mobileShoppingButton {
+  font-size: 20px;
+  bottom: 20px;
+}
+.footerContainer { 
+  height: 120px;
+} 
+}
+
+@media (max-width: 280px) { 
+.logo {
+  width: 120px;
+  margin-right: 20px;
+  padding: 10px;
+}
+.Speisekarte {
+  display: none;
+}
+.headerIcons {
+  display: flex;
+  padding: 0;
+  margin-right: 20px;
+}
+.warenkorb {
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+.closeButton {
+  top: 75px;
+  right: 20px;
+}
+.basket {
+  width: auto;
+  padding-bottom: 0;
+}
+.deliveryChoice {
+  width: 200px;
+  margin: 5px 10px 5px 10px;
+}
+.emptyBasket {
+  width: 240px;
+}
+.minValueOrder {
+  font-size: 12px;
+  width: 230px;
+  margin: 5px;
+  padding: 5px;
+}
+.icon {
+  width: 24px;
+  margin-right: 0;
+  padding: 0;
+}
+.headerImage {
+  height: 120px;
+}
+.profileContainer {
+  padding: 0;
+  margin: 0;
+}
+.profile {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.restaurantContainer {
+  width: 100%;
+  height: 150px;
+}
+.RestaurantName {
+  padding-left: 20px;
+}
+.profileContainer {
+  padding-top: 20px;
+}
+.menuChoiceContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+  flex-direction: column;
+}
+.menuCard {
+  padding-bottom: 220px;
+}
+.mobileShoppingButton {
+  font-size: 16px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  padding: 5px;
+}
+.overview {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.searchInput {
+  padding-left: 25px;
+}
+.searchIcon {
+  padding: 8px;
+  width: 24px;
+  height: 24px;
+} 
+.searchButton {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+.searchContainer {
+  width: 100%;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.closeSearch {
+  margin-left: -40px;
+} 
+.minValueOrder {
+  width: auto;
+  margin: 10px;
+  padding: 10px;
+}
+.orderContainer {
+  padding: 10px;
+}
+.order {
+  font-size: 12px;
+  gap: 5px;
+}
+.PlusMinusIcon {
+  font-size: 32px;
+  padding: 8px;
+  width: 32px;
+  height: 32px;
+}
+.paymentContainer {
+  margin: 20px;
+  margin-bottom: 50px;
+}
+.payment {
+  margin-top: 10px;
+} 
+}
